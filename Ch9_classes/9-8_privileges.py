@@ -20,16 +20,29 @@ class User():
         print(str('first name: '+self.first_name).title())
         print(str('last name: '+self.last_name).title())
         print(str('age: '+self.age).title())
+        print()
 
     def greet_user(self):
         """prints a personalized greeting to user"""
         print(str('greetings ' + self.user_name + ' thank you for logging in again').title())
+        print()
+
+class Privileges(User):
+    def __init__(self, user_name, first_name, last_name, age):
+        super().__init__(user_name, first_name, last_name, age)
+    privileges = ["can add post", "can delete post", "can ban user","can read files", 'can write files','can execute files','can modify files']
+
+    def show_privileges(self):
+        print('user has the following privileges:'.title())
+        for privilege in self.privileges:
+            print(str(privilege).title())
 
 def main():
     """main"""
-    user1 = User('trmart','taylor', 'martin', '27')
+    user1 = Privileges('trmart','taylor', 'martin', '27')
     user1.describe_user()
     user1.greet_user()
+    user1.show_privileges()
 
 if(__name__=='__main__'):
     main()
