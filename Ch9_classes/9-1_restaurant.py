@@ -14,7 +14,7 @@ class Restaurant():
 
     def describe_restaurant(self):
         """Prints the two pieces of info about the restaurant sent into it"""
-        print(self.restaurant_name + ' Specializes In '  + self.cuisine_type + 'Cuisine')
+        print(self.restaurant_name + ' Specializes In '  + self.cuisine_type + ' Cuisine')
 
     def open_restaurant(self):
         """prints a message indicating the restaurant is open"""
