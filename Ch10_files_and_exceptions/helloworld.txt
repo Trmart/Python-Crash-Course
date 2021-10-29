@@ -1,0 +1,9 @@
+"""This is an example of a simple Python Program"""
+
+def main():
+    
+    print('Hello Python World!')
+    print('This Was Read In From A Text File')
+
+if(__name__=='__main__'):
+    main()
