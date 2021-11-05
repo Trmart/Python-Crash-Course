@@ -34,8 +34,8 @@ def greet_user():
 
     username = get_stored_username()
     if username:
-        answer = input('Is ' + username + " that right username? ('y' for yes or 'n' for no".title())
-        if(answer.lower() == 'n'):
+        answer = input('Is ' + username + " the right username? ('y' for yes or 'n' for no): ".title())
+        if(answer.lower() == 'y'):
             print("Welcome back, " + username + "!")
         else:
             get_new_username()
@@ -45,6 +45,8 @@ def greet_user():
 
 def main():
     """main"""
+    get_new_username()
+    greet_user()
 
 if(__name__ == '__main__'):
     main()
