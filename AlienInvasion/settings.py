@@ -7,5 +7,5 @@ class Settings():
         self.screen_width = 1200 
         self.screen_height = 800
         self.bg_color = (230,230,230) #light grey/off white (Red,Green,Blue) 
-
+        self.ship_speed_factor = 1.5 
 #Red = (255,0,0) Green = (0,255,0) Blue = (0,0,255)

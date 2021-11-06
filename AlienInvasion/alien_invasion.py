@@ -1,7 +1,7 @@
 import pygame
 from settings import Settings
 from ship import Ship
-from game_functions import game_functions, update_screen
+from game_functions import check_events, update_screen
 
 def run_game():
     #init game and create our screen obj
@@ -11,13 +11,14 @@ def run_game():
     pygame.display.set_caption('Alien Invasion') #sets a caption for our window title bar
 
     #creates an instance of our ship class 
-    ship = Ship(screen)
+    ship = Ship(ai_settings,screen)
 
     #start the main game loop
     while True:
         #watch for keyboard and mouse events, calls game function class
-        game_functions()
-
+        check_events(ship)
+        #checks to see if play is holding down movement keys, updates ship position
+        ship.update_ship()
         #update screen 
         update_screen(ai_settings,screen,ship)
 
