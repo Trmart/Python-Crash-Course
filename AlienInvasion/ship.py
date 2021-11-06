@@ -1,6 +1,5 @@
 
 import pygame
-from pygame import event
 
 class Ship():
     

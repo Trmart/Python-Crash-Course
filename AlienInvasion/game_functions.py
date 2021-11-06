@@ -1,8 +1,6 @@
 from typing import Tuple
 import pygame #pygame add game functionality 
-import sys
-
-from pygame.constants import KEYUP #we use system to exit the game window when a player quits
+import sys #we use system to exit the game window when a player quits
 
 def check_events(ship):
     """creates a function to poll game events"""
