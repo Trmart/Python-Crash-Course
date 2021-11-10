@@ -1,7 +1,8 @@
 import pygame
+from pygame.sprite import Group
 from settings import Settings
 from ship import Ship
-from game_functions import check_events, update_screen
+from game_functions import check_events, update_screen,update_bullets
 
 def run_game():
     #init game and create our screen obj
@@ -13,14 +14,19 @@ def run_game():
     #creates an instance of our ship class 
     ship = Ship(ai_settings,screen)
 
+    #creates a group, functioning like a list, to manage bullets fired
+    bullets = Group()
+
     #start the main game loop
     while True:
         #watch for keyboard and mouse events, calls game function class
-        check_events(ship)
+        check_events(ai_settings,screen,ship,bullets)
         #checks to see if play is holding down movement keys, updates ship position
         ship.update_ship()
+        #update bullet position if in bullets
+        update_bullets(bullets)
         #update screen 
-        update_screen(ai_settings,screen,ship)
+        update_screen(ai_settings,screen,ship,bullets)
 
         #make the most recently drawn screen visible
         pygame.display.flip()

@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
         "pygame",
-        "centerx"
+        "centerx",
+        "keyup",
+        "KEYUP"
     ]
 }
