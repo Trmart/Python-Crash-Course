@@ -1,4 +1,3 @@
-from typing import Tuple
 import pygame #pygame add game functionality 
 import sys #we use system to exit the game window when a player quits
 from bullet import Bullet
@@ -30,6 +29,8 @@ def check_keydown_events(event,ai_settings,screen,ship,bullets):
         ship.moving_left = True
     elif event.key == pygame.K_SPACE:
       fire_bullet(ai_settings,screen,ship,bullets)
+    elif event.key == pygame.K_q:
+        sys.exit()
 
 def update_screen(ai_settings,screen,ship,bullets):
     """updates screen, fills background color, and draws ship game obj"""

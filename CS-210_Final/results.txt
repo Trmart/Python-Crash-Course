@@ -1,0 +1,12 @@
+list_comp_time:  0.017287247000240313  sec
+List comprehension random list:  [44 94 59 ... 78 44 21]
+list 1 length:  1000000
+loop_gen_total_time:  4.4596462919998885  sec
+Iterative for loop generation [82, 26, 8] ... [50, 48, 42]
+list 2 length:  1000000
+list comprehension was faster by:  4.442359044999648  sec
+Built in python sort on list 1:  [ 0  0  0 ... 99 99 99]
+Python built in sort elapsed time: 0.05698576399981903  sec
+list 2 sorted with defined counting sort:  [0, 0, 0] ... [99, 99, 99]
+Programmed Counting Sort elapsed time: 0.7170744129998639  sec
+Python built in sort algorithm was more efficient by:  0.6600886490000448  sec

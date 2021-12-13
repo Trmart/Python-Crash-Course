@@ -2,6 +2,7 @@ import pygame
 from pygame.sprite import Group
 from settings import Settings
 from ship import Ship
+from alien import Alien
 from game_functions import check_events, update_screen,update_bullets
 
 def run_game():
